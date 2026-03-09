@@ -1,0 +1,15 @@
+<h2 class="player-title">
+  <img [src]="player.logo" alt="Logo del jugador" class="player-logo">
+  {{ player.nombre }} {{ player.apellidos }}
+</h2>
+
+<p><strong>Posición:</strong> {{ player.posicion }}</p>
+<p><strong>Edad:</strong> {{ player.edad }}</p>
+<p><strong>Altura:</strong> {{ player.altura }} cm</p>
+
+<app-media [videoUrl]="player.video"></app-media>
+
+<br><br>
+
+<a routerLink="/">Volver a la lista</a>
+
