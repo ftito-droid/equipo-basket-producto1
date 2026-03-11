@@ -1,15 +1,43 @@
-<h2 class="player-title">
-  <img [src]="player.logo" alt="Logo del jugador" class="player-logo">
-  {{ player.nombre }} {{ player.apellidos }}
-</h2>
+<div class="container mt-4">
 
-<p><strong>Posición:</strong> {{ player.posicion }}</p>
-<p><strong>Edad:</strong> {{ player.edad }}</p>
-<p><strong>Altura:</strong> {{ player.altura }} cm</p>
+  <!-- BOTÓN DE VOLVER FUERA DEL RECUADRO -->
+  <button class="btn-back mb-3" routerLink="/">Volver</button>
 
-<app-media [videoUrl]="player.video"></app-media>
 
-<br><br>
 
-<a routerLink="/">Volver a la lista</a>
+  <!-- RECUADRO (CARD) CON INFO + VIDEO -->
+  <div class="card p-4">
 
+    <div class="row">
+
+      <!-- COLUMNA IZQUIERDA: INFORMACIÓN -->
+      <div class="col-md-6">
+
+        <h2 class="text-center mb-3">
+          {{ player.nombre }} {{ player.apellidos }}
+        </h2>
+
+        <p><strong>Posición:</strong> {{ player.posicion }}</p>
+        <p><strong>Edad:</strong> {{ player.edad }}</p>
+        <p><strong>Altura:</strong> {{ player.altura }} cm</p>
+        <p><strong>Equipo:</strong> {{ player.equipo }}</p>
+
+        <img 
+          [src]="player.foto" 
+          class="img-fluid mt-3 rounded" 
+          alt="Foto del jugador">
+
+      </div>
+
+      <!-- COLUMNA DERECHA: VIDEO / AUDIO -->
+      <div class="col-md-6 d-flex align-items-center justify-content-center">
+
+        <app-media [videoUrl]="player.video"></app-media>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

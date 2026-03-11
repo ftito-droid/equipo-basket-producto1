@@ -10,10 +10,15 @@ import { FilterPlayersPipe } from '../../pipes/filter.pipe';
   standalone: true,
   imports: [CommonModule, RouterModule, FormsModule, FilterPlayersPipe],
   templateUrl: './players.html',
-  styleUrls: ['./players.css']
-
+  styleUrl: './players.css'
 })
 export class PlayersComponent {
+
   players = PLAYERS;
+
   search: string = '';
+  positionFilter: string = '';
+  ageFilter: number | null = null;
+  teamFilter: string = '';
+
 }

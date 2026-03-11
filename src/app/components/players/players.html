@@ -1,9 +1,48 @@
-<input type="text" [(ngModel)]="search" placeholder="Buscar jugador..." class="search-input">
+<div class="container mt-4">
 
-<ul>
-  <li *ngFor="let player of players | filterPlayers: search">
-    <a [routerLink]="['/detail', player.id]">
-      {{ player.nombre }} {{ player.apellidos }} - {{ player.posicion }}
-    </a>
-  </li>
-</ul>
+  <h1 class="mb-4 text-center">Equipo Basket</h1>
+
+  <!-- BUSCADOR POR NOMBRE -->
+  <input
+    type="text"
+    class="form-control mb-3"
+    placeholder="Buscar por nombre..."
+    [(ngModel)]="search">
+
+  <!-- FILTRO POR POSICIÓN -->
+  <select [(ngModel)]="positionFilter" class="form-control mb-3">
+    <option value="">Todas las posiciones</option>
+    <option value="Base">Base</option>
+    <option value="Escolta">Escolta</option>
+    <option value="Alero">Alero</option>
+    <option value="Pivot">Pivot</option>
+  </select>
+
+  <!-- FILTRO POR EDAD (MAYOR QUE X) -->
+  <input
+    type="number"
+    class="form-control mb-3"
+    placeholder="Edad mayor que..."
+    [(ngModel)]="ageFilter">
+
+  <!-- FILTRO POR EQUIPO -->
+  <input
+    type="text"
+    class="form-control mb-3"
+    placeholder="Filtrar por equipo"
+    [(ngModel)]="teamFilter">
+
+  <!-- LISTADO DE JUGADORES -->
+  <ul class="list-group mt-3">
+    <li
+      *ngFor="let player of players | filterPlayers: search : positionFilter : ageFilter : teamFilter"
+      class="list-group-item">
+
+      <a [routerLink]="['/detail', player.id]">
+        {{ player.nombre }} {{ player.apellidos }} - {{ player.posicion }} ({{ player.equipo }})
+      </a>
+
+    </li>
+  </ul>
+
+</div>

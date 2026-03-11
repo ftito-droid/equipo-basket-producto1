@@ -38,3 +38,19 @@ a {
 a:hover {
   background: rgba(255, 255, 255, 0.35);
 }
+.btn-back {
+  background-color: #3a3f47 !important;
+  color: white !important;
+  border: none !important;
+  padding: 8px 14px !important;
+  border-radius: 6px !important;
+  font-weight: bold !important;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  position: relative;
+  z-index: 10;
+}
+
+.btn-back:hover {
+  background-color: #4a4f57 !important;
+}

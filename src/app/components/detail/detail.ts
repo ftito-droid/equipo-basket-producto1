@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ActivatedRoute, RouterLink } from '@angular/router';
+import { ActivatedRoute, RouterLink, RouterModule } from '@angular/router';
 import { PLAYERS } from '../../data/players';
-import { SafeUrlPipe } from '../../pipes/safe-url.pipe';
 import { MediaComponent } from '../media/media';
 
 @Component({
   selector: 'app-detail',
   standalone: true,
-  imports: [CommonModule, MediaComponent, RouterLink],
+  imports: [CommonModule, MediaComponent, RouterLink, RouterModule],
   templateUrl: './detail.html',
   styleUrls: ['./detail.css']
 })
