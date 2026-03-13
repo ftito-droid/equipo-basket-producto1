@@ -1,4 +1,4 @@
-import { Component, Input, ViewChild, ElementRef } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -6,36 +6,19 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './media.html',
-  styleUrl: './media.css'
+  styleUrls: ['./media.css']
 })
-export class MediaComponent {
+export class MediaComponent implements OnChanges {
 
-  @Input() videoUrl!: string;
+  @Input() videoUrl: string = '';
 
-  @ViewChild('player', { static: false }) player!: ElementRef<HTMLVideoElement>;
-
-  play() {
-    this.player.nativeElement.play();
-  }
-
-  pause() {
-    this.player.nativeElement.pause();
-  }
-
-  stop() {
-    const vid = this.player.nativeElement;
-    vid.pause();
-    vid.currentTime = 0;
-  }
-
-  mute() {
-    const vid = this.player.nativeElement;
-    vid.muted = !vid.muted;
-  }
-
-  restart() {
-    const vid = this.player.nativeElement;
-    vid.currentTime = 0;
-    vid.play();
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes['videoUrl']) {
+      // Forzar recarga del video
+      const videoElement = document.getElementById('player') as HTMLVideoElement;
+      if (videoElement) {
+        videoElement.load();
+      }
+    }
   }
 }

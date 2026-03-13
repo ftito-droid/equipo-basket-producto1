@@ -1,56 +1,72 @@
 :host {
-  display: block;
-  padding: 20px;
-  color: white;
+  display: block !important;
+  width: 600px !important;
 }
 
-.player-title {
+/* TARJETA DEL JUGADOR */
+.player-card {
+  background:#3b8ae4 !important;
+  padding: 20px !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+
+  width: 100% !important;
+  max-width: 1400px !important;
+  margin: 0 auto !important;
+
+}
+
+
+/* CONTENIDO INTERNO */
+.player-content {
   display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 36px;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+/* COLUMNA IZQUIERDA */
+.player-left {
+  flex: 1;
+}
+
+.player-photo {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  border-radius: 50%;
+  display: block;
   margin-bottom: 10px;
 }
 
-.player-logo {
-  width: 60px;
-  height: 60px;
-  object-fit: contain;
+.player-name {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-size: 1.6rem;
 }
 
-
-p {
-  font-size: 20px;
-  margin: 6px 0;
+/* COLUMNA DERECHA (VIDEO) */
+.player-right {
+  flex: 1;
+  max-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
-a {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 15px;
-  background: rgba(255, 255, 255, 0.2);
-  color: white;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: 0.2s;
+.player-right video {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
 }
 
-a:hover {
-  background: rgba(255, 255, 255, 0.35);
-}
-.btn-back {
-  background-color: #3a3f47 !important;
-  color: white !important;
-  border: none !important;
-  padding: 8px 14px !important;
-  border-radius: 6px !important;
-  font-weight: bold !important;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-  position: relative;
-  z-index: 10;
-}
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .player-content {
+    flex-direction: column;
+    align-items: center;
+  }
 
-.btn-back:hover {
-  background-color: #4a4f57 !important;
+  .player-right {
+    max-width: 100%;
+  }
 }

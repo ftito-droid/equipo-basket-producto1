@@ -1,25 +1,4 @@
-<div class="media-container">
-
-  <video
-    #player
-    width="100%"
-    height="auto"
-    [src]="videoUrl"
-    class="video-player">
-  </video>
-
-</div>
-<div class="media-buttons">
-
-  <button class="btn" (click)="play()">▶️</button>
-
-  <button class="btn" (click)="pause()">⏸️</button>
-
-  <button class="btn" (click)="stop()">⏹️</button>
-
-  <button class="btn" (click)="mute()">🔇</button>
-
-  <button class="btn" (click)="restart()">⏮️</button>
-
-</div>
-
+<video id="player" class="player-video" controls>
+  <source [src]="videoUrl" type="video/mp4">
+  Tu navegador no soporta video.
+</video>

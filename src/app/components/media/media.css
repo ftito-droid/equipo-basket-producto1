@@ -1,31 +1,7 @@
-.video-player {
-  border-radius: 12px;
-  border: 2px solid var(--color-borde);
-  max-width: 100%;
-}
-
-.media-container {
-  display: flex;
-  justify-content: center;
-}
-.media-buttons .btn {
-  background-color: #3a3f47 !important;   /* Gris oscuro elegante */
-  border: none !important;
-  color: #ffffff !important;              /* Texto blanco */
-  padding: 8px 14px !important;
-  border-radius: 6px !important;
-  font-size: 0.9rem !important;
-  font-weight: bold !important;
-  transition: background-color 0.2s ease;
-}
-
-.media-buttons .btn:hover {
-  background-color: #4a4f57 !important;   /* Gris más claro al pasar el ratón */
-}
-
-.media-buttons {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-top: 15px;
+.player-video {
+  width: 250px;      /* tamaño fijo */
+  height: 400px;     /* altura fija */
+  object-fit: cover; /* recorta si hace falta */
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
 }
