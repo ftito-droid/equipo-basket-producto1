@@ -1,14 +1,22 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SafeUrlPipe } from '../../pipes/safe-url.pipe';
 
 @Component({
   selector: 'app-media',
   standalone: true,
-  imports: [CommonModule, SafeUrlPipe],
+  imports: [CommonModule],
   templateUrl: './media.html',
-  styleUrl: './media.css'
+  styleUrls: ['./media.css']
 })
-export class MediaComponent {
-  @Input() videoUrl!: string;
+export class MediaComponent implements OnChanges {
+  @Input() selectedPlayer: any = null;
+
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes['selectedPlayer']) {
+      const videoElement = document.getElementById('player') as HTMLVideoElement;
+      if (videoElement) {
+        videoElement.load();
+      }
+    }
+  }
 }

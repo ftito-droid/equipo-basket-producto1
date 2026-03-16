@@ -1,9 +1,4 @@
-<div class="media-container">
-  <iframe
-    width="560"
-    height="315"
-    [src]="videoUrl | safeUrl"
-    frameborder="0"
-    allowfullscreen>
-  </iframe>
-</div>
+<video *ngIf="selectedPlayer" id="player" class="player-video" controls>
+  <source [src]="selectedPlayer?.video" type="video/mp4">
+  Tu navegador no soporta video.
+</video>
