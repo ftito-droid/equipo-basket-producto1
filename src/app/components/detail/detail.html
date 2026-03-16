@@ -1,15 +1,20 @@
-<h2 class="player-title">
-  <img [src]="player.logo" alt="Logo del jugador" class="player-logo">
-  {{ player.nombre }} {{ player.apellidos }}
-</h2>
+<div *ngIf="selectedPlayer" class="player-card">
 
-<p><strong>Posición:</strong> {{ player.posicion }}</p>
-<p><strong>Edad:</strong> {{ player.edad }}</p>
-<p><strong>Altura:</strong> {{ player.altura }} cm</p>
+  <div class="player-content">
 
-<app-media [videoUrl]="player.video"></app-media>
+    <div class="player-left">
+      <img [src]="selectedPlayer.foto" alt="foto" class="player-photo">
 
-<br><br>
+      <h2 class="player-name">
+        {{ selectedPlayer.nombre }} {{ selectedPlayer.apellidos }}
+      </h2>
 
-<a routerLink="/">Volver a la lista</a>
+      <p><strong>Posición:</strong> {{ selectedPlayer.posicion }}</p>
+      <p><strong>Edad:</strong> {{ selectedPlayer.edad }}</p>
+      <p><strong>Altura:</strong> {{ selectedPlayer.altura }} cm</p>
+      <p><strong>Equipo:</strong> {{ selectedPlayer.equipo }}</p>
+    </div>
 
+  </div>
+
+</div>

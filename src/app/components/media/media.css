@@ -1,4 +1,7 @@
-.media-container {
-  margin-top: 20px;
-  text-align: center;
+.player-video {
+  width: 250px;      /* tamaño fijo */
+  height: 400px;     /* altura fija */
+  object-fit: cover; /* recorta si hace falta */
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
 }

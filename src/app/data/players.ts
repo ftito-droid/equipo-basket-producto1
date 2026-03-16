@@ -6,10 +6,12 @@ export const PLAYERS = [
     posicion: "Escolta",
     edad: 63,
     altura: 198,
-    video: "https://www.youtube.com/embed/jbW4f60dCNA",
+    video: "/assets/videos/jordan.mp4",
     color1: '#000000ff',
     color2: '#2a5298',
-    logo: "/assets/logos/bulls.png"
+    logo: "/assets/logos/bulls.png",
+    equipo: "Chicago Bulls",
+    foto: "/assets/images/jordan.png"
   },
   {
     id: 2,
@@ -18,10 +20,12 @@ export const PLAYERS = [
     posicion: "Escolta",
     edad: 48,
     altura: 198,
-    video: "https://www.youtube.com/embed/1fjhIWJSxfw",
+    video: "/assets/videos/kobe.mp4",
     color1: '#8c08a7ff',
     color2: '#ecb92dff',
-    logo: "/assets/logos/lakers.png"
+    logo: "/assets/logos/lakers.png",
+    equipo: "Los Angeles Lakers",
+    foto: "/assets/images/kobe.png"
   },
   {
     id: 3,
@@ -30,22 +34,26 @@ export const PLAYERS = [
     posicion: "Alero",
     edad: 41,
     altura: 206,
-    video: "https://www.youtube.com/embed/-9lP95Qo-I0",
+    video: "/assets/videos/lebron.mp4",
     color1: '#550505ff',
     color2: '#032663ff',
-    logo: "/assets/logos/cavs.png"
+    logo: "/assets/logos/cavs.png",
+    equipo: "Cleveland Cavaliers / Miami Heat / Los Angeles Lakers",
+    foto: "/assets/images/lebron.png"
   },
   {
     id: 4,
-    nombre: "Kareeem",
+    nombre: "Kareem",
     apellidos: "Abdul-Jabbar",
     posicion: "Pivot",
     edad: 78,
     altura: 216,
-    video: "https://www.youtube.com/embed/OTL8dW6PqPE",
+    video: "/assets/videos/kareem.mp4",
     color1: '#8c08a7ff',
     color2: '#ecb92dff',
-    logo: "/assets/logos/lakers.png"
+    logo: "/assets/logos/lakers.png",
+    equipo: "Milwaukee Bucks / Los Angeles Lakers",
+    foto: "/assets/images/kareem.png"
   },
   {
     id: 5,
@@ -54,9 +62,12 @@ export const PLAYERS = [
     posicion: "Base",
     edad: 66,
     altura: 203,
-    video: "https://www.youtube.com/embed/prvjNFHSOj0",
+    video: "/assets/videos/magic.mp4",
     color1: '#8c08a7ff',
     color2: '#ecb92dff',
-    logo: "/assets/logos/lakers.png"
-  }
+    logo: "/assets/logos/lakers.png",
+    equipo: "Los Angeles Lakers",
+    foto: "/assets/images/magic.png"
+  },
+
 ];
