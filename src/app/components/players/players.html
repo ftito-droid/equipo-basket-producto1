@@ -52,7 +52,7 @@
   <li
     *ngFor="let player of players | filterPlayers: search : positionFilter : ageFilter : teamFilter"
     class="list-group-item list-group-item-action d-flex align-items-center"
-    [routerLink]="['/detail', player.id]"
+    (click)="selectPlayer(player)"
     style="cursor: pointer;"
   >
     <img 

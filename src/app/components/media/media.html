@@ -1,4 +1,4 @@
-<video id="player" class="player-video" controls>
-  <source [src]="videoUrl" type="video/mp4">
+<video *ngIf="selectedPlayer" id="player" class="player-video" controls>
+  <source [src]="selectedPlayer?.video" type="video/mp4">
   Tu navegador no soporta video.
 </video>

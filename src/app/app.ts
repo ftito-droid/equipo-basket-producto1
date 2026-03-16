@@ -1,12 +1,19 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { PlayersComponent } from './components/players/players';
+import { DetailComponent } from './components/detail/detail';
+import { MediaComponent } from './components/media/media';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, PlayersComponent],
+  imports: [PlayersComponent, DetailComponent, MediaComponent],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })
-export class AppComponent {}
+export class AppComponent {
+  selectedPlayer: any = null;
+
+  onPlayerSelected(player: any) {
+    this.selectedPlayer = player;
+  }
+}

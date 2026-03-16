@@ -9,12 +9,10 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./media.css']
 })
 export class MediaComponent implements OnChanges {
-
-  @Input() videoUrl: string = '';
+  @Input() selectedPlayer: any = null;
 
   ngOnChanges(changes: SimpleChanges) {
-    if (changes['videoUrl']) {
-      // Forzar recarga del video
+    if (changes['selectedPlayer']) {
       const videoElement = document.getElementById('player') as HTMLVideoElement;
       if (videoElement) {
         videoElement.load();
