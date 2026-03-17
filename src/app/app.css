@@ -2,15 +2,23 @@
   display: block;
   width: 100%;
 }
-/* Centrar el contenido de la columna izquierda */
-.col-12.col-md-4.col-lg-3 {
-  display: flex;
-  justify-content: right;
+
+body {
+  background-color: #0b0f1a;
 }
 
-/* Hacer que app-players NO ocupe todo el ancho */
-app-players {
-  width: 100%;
-  max-width: 500px; /* ajusta a tu gusto */
-  margin-left: 50px; /* ajusta a tu gusto */
+.site-header {
+  background-color: #0b0f1a;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.site-footer {
+  background-color: #0b0f1a;
+  color: white;
+}
+
+.container-fluid {
+  padding: 20px;
 }

@@ -45,20 +45,23 @@
 </div>
 
 <!-- LISTADO DE JUGADORES -->
-<ul class="list-group">
+<ul class="list-group players-list">
   <li
     *ngFor="let player of players | filterPlayers: search : positionFilter : ageFilter : teamFilter"
-    class="list-group-item list-group-item-action d-flex align-items-center"
+    class="list-group-item list-group-item-action d-flex align-items-center player-item"
     (click)="selectPlayer(player)"
     style="cursor: pointer;"
   >
-    <img 
+    <img
       [src]="player.foto"
       alt="foto"
-      class="rounded me-2"
-      width="40"
-      height="40"
+      class="rounded me-3 player-image"
+      width="50"
+      height="50"
     >
-    <span>{{ player.nombre }} {{ player.apellidos }}</span>
+    <div class="player-text">
+      <div class="player-name">{{ player.nombre }} {{ player.apellidos }}</div>
+      <div class="player-position">{{ player.posicion }}</div>
+    </div>
   </li>
 </ul>
