@@ -1,0 +1,54 @@
+:host {
+  display: block;
+  width: 100%;
+}
+/* Centrar el contenido de la columna izquierda */
+.col-12.col-md-4.col-lg-3 {
+  display: flex;
+  justify-content: right;
+}
+
+/* Hacer que app-players NO ocupe todo el ancho */
+app-players {
+  width: 100%;
+  max-width: 500px; /* ajusta a tu gusto */
+  margin-left: 50px; /* ajusta a tu gusto */
+}
+@media (min-width: 992px) { /* Solo para pantallas grandes (lg) */
+  .media-floating {
+    position: absolute !important;
+    top: 165px;
+    /* Si players es col-lg-3 (25%), empezamos en el 35% 
+       para dejar ver el inicio de la columna details */
+    left: 50%;
+    margin: 0%;
+    /* Ajustamos el ancho al 20% para que no tape todo details */
+    transform: none !important;
+    width: 35%; 
+    /*width: 240px !important; /* Antes 300px o 35%, ahora más pequeño
+
+    height: auto !important;*/
+    z-index: 999;
+    flex: none !important;  
+    pointer-events: auto; /* Permite hacer clic en details si media es visual */
+    /* 4. Estética */
+    background: transparent !important; /* FUERZA fondo transparente */  
+    box-shadow: none !important;
+    padding: 0 !important;
+    border: none !important;
+    border-radius: 8px;
+    /*
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    padding: 10px;
+    */
+
+    overflow: hidden;
+  }
+
+  app-media {
+    pointer-events: auto; /* Permite interactuar con los controles de media */
+    background: rgba(255, 255, 255, 0.8); /* Opcional: ver algo de fondo */
+    box-shadow: -5px 0 15px rgba(0,0,0,0.1); /* Sombra para dar profundidad */
+  }
+  
+}
