@@ -1,19 +1,21 @@
 <header class="site-header text-center p-3">
-  <h1>Equipo Basket</h1>
+  <h1>The Breakpoints Basket Team</h1>
 </header>
 
 <div class="container-fluid">
-  <div class="row">
+  <div class="row position relative">
 
     <div class="col-12 col-md-4 col-lg-3 p-3">
       <app-players (playerSelected)="onPlayerSelected($event)"></app-players>
     </div>
 
-    <div class="col-12 col-md-4 col-lg-5 p-4">
+    <!-- Details (33.3% del ancho en lg) -->
+    <div class="col-12 col-md-4 col-lg-4 p-4">
       <app-detail [selectedPlayer]="selectedPlayer"></app-detail>
     </div>
 
-    <div class="col-12 col-md-4 col-lg-4 p-4">
+    <!-- Media (Flotando sobre una parte de Details) -->
+    <div class="col-12 col-md-4 col-lg-5 p-4 media-floating">
       <app-media [selectedPlayer]="selectedPlayer"></app-media>
     </div>
 
