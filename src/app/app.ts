@@ -16,4 +16,8 @@ export class AppComponent {
   onPlayerSelected(player: any) {
     this.selectedPlayer = player;
   }
+  
+  onClearSelection() {
+    this.selectedPlayer = null;
+  }
 }
