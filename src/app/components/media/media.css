@@ -1,14 +1,36 @@
 .player-video {
-  width: 250px;      /* tamaño fijo */
-  /*height: 400px;*/     /* altura fija */
-  height: 410px;    /* altura fija */
-  object-fit: cover; /* recorta si hace falta */
+  width: 250px;      
+  height: 385px;    
+  object-fit: cover;
   border-radius: 10px;
-  /*box-shadow: 0 3px 10px rgba(0,0,0,0.2);*/
-  box-shadow: none !important;      /* Quita el sombreado */
-  background: transparent !important; /* Quita cualquier fondo sólido */
-  border: none !important;           /* Quita bordes si los hubiera */
-  display: block;       /* 1. Elimina el espacio de línea de texto inferior */
-  margin-bottom: 0;     /* 2. Asegura que no haya margen abajo */
-  
+  box-shadow: none !important;
+  background: transparent !important;
+  border: none !important;
+  display: block;
+  margin-bottom: 0;
+  margin-top: auto;
+}
+
+/* Controles debajo del vídeo */
+.video-controls {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 10px;
+  margin-left: 45px;
+}
+
+.video-controls button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  background: #eef1f3;
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.video-controls button:hover {
+  background: #125a9c;
 }
