@@ -11,7 +11,10 @@
       <p><strong>Edad:</strong> {{ selectedPlayer.edad }}</p>
       <p><strong>Altura:</strong> {{ selectedPlayer.altura }} cm</p>
       <p><strong>Equipo:</strong> {{ selectedPlayer.equipo }}</p>
-      <button (click)="onClearSelection()">Cerrar</button>
+      <button class="close-btn" (click)="onClearSelection()">
+  ❌ Cerrar
+</button>
+
     </div>
   </div>
 </div>
